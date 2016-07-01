@@ -1,0 +1,48 @@
+<div class="bar bar-header" id="store-header" style="background-image: none;box-shadow: none;">
+  <button id="store-back" class="button button-icon icon ion-android-arrow-back" ui-sref="tab.home"></button>
+  <div class="title dark" id="store-title">鲜芋仙(绿地金融城店)</div>
+  <div class="buttons-right" id="store-tools">
+    <button class="button button-clear button-icon ion-ios-search"></button>
+    <button class="button button-clear button-icon ion-ios-star-outline"></button>
+  </div>
+</div>
+<ion-content delegate-handle="store-header" class="stable-bg" on-scroll="vm.onScroll()">
+  <div class="header-corver">
+    <div class="list">
+      <div class="item item-thumbnail-left">
+        <img class="store-logo" src="img/QQ.png"/>
+        <h2 class="store-title light">鲜芋仙(绿地金融城店)</h2>
+        <p style="color:#dddddd;">总销量4270单</p>
+      </div>
+      <div class="item assertive-bg item-icon-left item-icon-right light">
+        <i class="ion-android-volume-up icon"></i>
+        请在早中晚高峰就餐时段提前订餐,本店餐品均为现做
+        <i class="icon ion-ios-arrow-right"></i>
+      </div>
+    </div>
+  </div>
+  <div class="tabs-striped tabs-top tabs-color-assertive" style="height: 52px;">
+    <div class="tabs" style="position: static">
+      <a class="tab-item" ui-sref="store.wares" ui-sref-active="active">
+        商品
+      </a>
+      <a class="tab-item" ui-sref="store.valuation" ui-sref-active="active">
+        评价
+      </a>
+      <a class="tab-item" ui-sref="store.business" ui-sref-active="active">
+        商家
+      </a>
+    </div>
+  </div>
+  <ui-view></ui-view>
+</ion-content>
+<div class="list dark-bg" ng-show="vm.stateView" style="position: absolute;bottom: 0;width: 100%;">
+  <div class="item item-icon-left item-buttons-right" style="">
+    <i class="icon iconfont">&#xe624;</i>
+    <span class="badge badge-left badge-assertive">1</span>
+    <button class="button button-assertive stick ink">
+      确认下单
+    </button>
+    <strong class="large">￥17</strong>
+  </div>
+</div>

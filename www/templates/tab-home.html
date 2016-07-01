@@ -1,0 +1,206 @@
+<ion-view view-title="{{vm.title}}">
+  <div class="bar bar-header" id="header">
+    <h3 class="title">
+      <span id="corver">
+        <i class="icon ion-android-pin"></i>
+            绿地金融城
+        <i class="icon ion-ios-arrow-right"></i>
+      </span>
+    </h3>
+    <button id="search" class="button button-icon button-clear ion-ios-search"></button>
+  </div>
+  <ion-content class="stable-bg" delegate-handle="homeContent" on-scroll="vm.scrollContent()">
+
+    <ion-slide-box show-pager="true" does-continue="true" auto-play="true" slide-interval="4000" style="height:auto;">
+      <ion-slide ng-repeat="item in vm.slides">
+        <img src="img/banner.png" >
+      </ion-slide>
+    </ion-slide-box>
+    <div class="row light-bg row-wrap">
+      <div class="col col-25">
+        <button ui-sref="sign.up" class="button button-fab color1 icon iconfont">&#xe624;</button>
+        <h5>美食</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color2 icon iconfont" style="padding-top: 4px;">&#xe66a;</button>
+        <h5>超市</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color3 icon iconfont" style="padding-left: 4px;">&#xe649;</button>
+        <h5>饮品</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color4 icon iconfont" style="padding-left: 3px;padding-bottom: 4px;">&#xe75c;</button>
+        <h5>甜品</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color5 icon iconfont" style="padding-left: 1.6px;">&#xe769;</button>
+        <h5>水果</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color6 icon iconfont">&#xe606;</button>
+        <h5>鲜花</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color7 hue-1 icon iconfont">&#xe629;</button>
+        <h5>医药</h5>
+      </div>
+      <div class="col col-25">
+        <button class="button button-fab color8 icon iconfont" style="padding-left: 2px;padding-top: 3px;">&#xe6cc;</button>
+        <h5>礼品</h5>
+      </div>
+    </div>
+
+    <div class="list light-bg">
+      <div class="item item-divider divider-start" >
+        附近商家
+      </div>
+
+      <a class="item item-thumbnail-left" ui-sref="store.wares">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+      <a class="item item-thumbnail-left">
+        <img src="img/111.jpg" alt="商标">
+        <span class="item-note">
+            <100m
+        </span>
+        <h2 class="title">鲜芋仙</h2>
+        <q class="balanced" style="margin: 0;">总销量467单</q>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

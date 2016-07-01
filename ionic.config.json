@@ -1,0 +1,12 @@
+{
+  "name": "集食送",
+  "app_id": "ebe921f3",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/**",
+    "!www/lib/**/*"
+  ]
+}

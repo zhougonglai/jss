@@ -1,0 +1,288 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$assertive:#c92138;
+$border-radius-base:50%;
+$border-radius-bar:50px;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+@import "www/lib/ionic-material/src/scss/index";
+
+//  GUI
+.column{
+  @include flex-direction(column);
+}
+.col{
+  &>button.icon.iconfont{
+    margin:0 auto;
+    display: block;
+  }
+  &>h5{
+    text-align: center;
+  }
+}
+
+// fix
+ion-scroll.scroll-view.ionic-scroll{
+  .scroll{
+  }
+}
+
+ion-slide {
+  height: 100%;
+  img{
+    height: 200px;
+    width: 100%;
+  }
+}
+
+//color
+.red{
+  &.hue-1{
+    background-color: #ff5951;
+    color:#fff;
+  }
+  &.hue-2{
+    background-color: #c92138;
+    color:#fff;
+  }
+}
+
+.button-energized{
+  &.hue-1{
+    background-color: #F4CF47;
+  }
+}
+
+.list{
+  margin-bottom: 10px;
+  &.list-inset{
+    border-left: none;
+    .item{
+      border-bottom: 1px solid #8f8f8f;
+    }
+  }
+  &.dark-bg{
+    opacity: .8;
+    .item{
+      color:#fff;
+    }
+  }
+  .item{
+    //border-bottom: 1px solid #D9D9D9;
+    .item-note.large{
+      font-size: x-large;
+    }
+
+    .badge-left{
+      left: ($item-padding * 2);
+      right:auto;
+      top: $item-padding/2;
+      padding: 0 4px 0px 4px;
+    }
+  }
+  .active{
+    background-color: #fff;
+    margin: 0;
+    border-left: 4px solid $assertive;
+  }
+  .item-icon-right{
+    &>.icon:nth-child(2){
+      right: 16px !important;
+    }
+    &>.badge{
+      right: 45px;
+    }
+  }
+  .item-floating-label.item-button-right{
+    button.button{
+      right:5px;
+      top: 17px;
+      padding: 0 15px;
+      border-radius: 50px;
+    }
+  }
+  .item-bg-img{
+    background-image: url("../img/bg.png");
+    height: 33vh;
+    background-size: cover;
+    padding:0;
+    background-position: top center;
+    .logo{
+      width: 60px;
+      height: 60px;
+      margin:15% auto 5% auto;
+      &>img{
+       width: 100%;
+       height:100%;
+        border-radius: 50%;
+      }
+    }
+  }
+  .item-divider{
+    &.divider-start{
+      border-left:6px solid $assertive;
+    }
+    &.divider-end{
+      border-top: 0;
+      text-indent:15px;
+      text-align: end;
+      font-size: large;
+      line-height: 2em;
+      border-right:6px solid $assertive;
+      .item-note{
+        font-size: larger;
+      }
+    }
+  }
+  .item-buttons-right{
+    &>.button{
+      float:right;
+      width: 127px;
+      &.stick{
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        height: 100% !important;
+      }
+    }
+    &>.button:first-child{
+      border-radius: 0 $border-radius-bar $border-radius-bar 0;
+    }
+    &>.button:last-child{
+      border-radius:$border-radius-bar 0 0 $border-radius-bar;
+    }
+  }
+  .item-thumbnail-left{
+    img{
+      //margin: -8px;
+      //margin-left: 8px;
+      border-radius: 0;
+    }
+    .title{
+      padding: 15px 0;
+      font-weight: 700;
+    }
+    .note{
+      color: #55ff58;
+    }
+  }
+}
+
+
+.content-body{
+  background-image: url("../img/bg1.png");
+  height: 38vh;
+  background-size: cover;
+  background-position: bottom center;
+  .logo{
+    width: 60px;
+    height: 60px;
+    margin:15% auto 5% auto;
+    &>img{
+      width: 100%;
+      height:100%;
+      border-radius: 50%;
+    }
+  }
+  &>.button-bar{
+    position: absolute;
+    bottom: 0;
+    &>a.button{
+      background-color: rgba(0,0,0,0);
+      color:#fff;
+      &.active:before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 0px;
+        height: 0px;
+        border-left:10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+      }
+    }
+  }
+}
+
+
+.slider-pager{
+  bottom: 0px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100% 100% 0 0;
+  .slider-pager-page {
+    color: $assertive;
+  }
+}
+
+.bar.bar-header{
+  &>button:nth-of-type(2){
+    background-color: #000000;
+  }
+  &.corver-header{
+    background-color: RGBA(0,0,0,0);
+    background-image: none;
+    box-shadow: none;
+  }
+  a{
+    line-height: 3em;
+    padding: 0 8px;
+    color: grey;
+    width: 75px;
+    text-align: center;
+    &.active{
+      border-bottom: 2px solid $assertive;
+      color: $assertive;
+    }
+    &+a{
+      margin:0 8px;
+    }
+  }
+}
+
+
+//store
+.header-corver{
+  background-image: url('/img/bg2.png');
+  height: 200px;
+  .list{
+    padding-top: 45px;
+    //position: absolute;
+    //bottom: 42px;
+    width: 100%;
+    height:100%;
+    .item.item-thumbnail-left{
+      height: 100px;
+    }
+    .item.assertive-bg{
+      position: absolute;
+      bottom: 0;
+      background-color:$assertive;
+    }
+  }
+  img.store-logo{
+    border-radius: 7px;
+  }
+  .store-content{
+
+  }
+}

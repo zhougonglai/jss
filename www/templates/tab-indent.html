@@ -1,0 +1,112 @@
+<ion-view view-title="{{vm.title}}">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear">编辑</button>
+  </ion-nav-buttons>
+  <ion-content scroll="false">
+    <div class="bar bar-header">
+      <a ng-class="{1:'active'}[vm.index]" ng-click="vm.index = 1">全部</a>
+      <a ng-class="{2:'active'}[vm.index]" ng-click="vm.index = 2">代付款</a>
+      <a ng-class="{3:'active'}[vm.index]" ng-click="vm.index = 3">已完成</a>
+    </div>
+    <ion-scroll style="padding-top:44px;">
+
+      <div class="list" ng-show="vm.index == 1||vm.index == 3">
+        <a class="item item-divider divider-start assertive-border">
+          鲜芋仙(绿地国际金融城)
+          <i class="icon ion-ios-arrow-forward" style="margin-left: 5%"></i>
+          <span class="item-note assertive">
+            待评价
+          </span>
+        </a>
+
+        <a class="item item-thumbnail-left">
+          <img src="img/111.jpg" alt="商标">
+          <span class="item-note">
+              <i class="icon ion-social-yen"></i>17.00
+          </span>
+          <h2 class="title">鲜芋仙</h2>
+          <span class="item-note">
+              x 1
+          </span>
+        </a>
+
+        <a class="item item-thumbnail-left">
+          <img src="img/111.jpg" alt="商标">
+          <span class="item-note">
+              <i class="icon ion-social-yen"></i>17.00
+          </span>
+          <h2 class="title">鲜芋仙</h2>
+          <span class="item-note">
+              x 1
+          </span>
+        </a>
+
+        <a class="item item-divider divider-end">
+          总共5份 共计:
+          <span class="item-note assertive">
+            <i class="icon ion-social-yen"></i>100.00
+          </span>
+        </a>
+
+        <div class="item item-buttons-right">
+          <button class="button button-assertive button-small">
+            去评价
+          </button>
+          <button class="button button-outline button-assertive button-small">
+            再来一单
+          </button>
+        </div>
+      </div>
+
+      <div class="list" style="padding-bottom: 44px;" ng-show="vm.index == 1||vm.index == 2">
+        <div class="item item-checkbox">
+          <label class="checkbox checkbox-assertive">
+            <input type="checkbox">
+          </label>
+          鲜芋仙(绿地国际金融城)
+          <i class="icon ion-ios-arrow-forward" style="margin-left: 5%"></i>
+        </div>
+
+        <a class="item item-thumbnail-left">
+          <img src="img/111.jpg" alt="商标">
+          <span class="item-note">
+              <i class="icon ion-social-yen"></i>17.00
+          </span>
+          <h2 class="title">鲜芋仙</h2>
+          <span class="item-note">
+              x 1
+          </span>
+        </a>
+
+        <a class="item item-thumbnail-left">
+          <img src="img/111.jpg" alt="商标">
+          <span class="item-note">
+              <i class="icon ion-social-yen"></i>17.00
+          </span>
+          <h2 class="title">鲜芋仙</h2>
+          <span class="item-note">
+              x 1
+          </span>
+        </a>
+      </div>
+    </ion-scroll>
+    <!--<div class="bar bar-footer bar-dark" style="opacity: .8;">-->
+
+    <!--</div>-->
+    <div class="list dark-bg" ng-show="vm.index == 1||vm.index == 2" style="position: absolute;bottom: 0;width: 100%;">
+      <div class="item item-checkbox item-buttons-right">
+        <label class="checkbox checkbox-assertive" style="right: 50%;">
+          <input type="checkbox">
+        </label>
+        全选
+        <strong class="large" style="margin-left: 15px;">
+          总计:
+          <i class="icon ion-social-yen"></i>100
+        </strong>
+        <button class="button button-assertive stick ink" style="border-radius: 0;">
+          去结算
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
